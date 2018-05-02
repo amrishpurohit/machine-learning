@@ -99,7 +99,8 @@ class Simulator(object):
                     self.log_filename = os.path.join("logs", "sim_default-learning.csv")
                     self.table_filename = os.path.join("logs","sim_default-learning.txt")
 
-                self.table_file = open(self.table_filename, 'wb')
+                #self.table_file = open(self.table_filename, 'wb')
+                self.table_file = open(self.table_filename, 'w')
             else:
                 self.log_filename = os.path.join("logs", "sim_no-learning.csv")
             
@@ -236,7 +237,8 @@ class Simulator(object):
 
                 for state in a.Q:
                     f.write("{}\n".format(state))
-                    for action, reward in a.Q[state].iteritems():
+                    #for action, reward in a.Q[state].iteritems():
+                    for action, reward in a.Q[state].items():
                         f.write(" -- {} : {:.2f}\n".format(action, reward))
                     f.write("\n")  
                 self.table_file.close()
