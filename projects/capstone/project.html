@@ -11820,7 +11820,7 @@ Here is list of packages used in this project.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
@@ -11872,7 +11872,7 @@ Here is list of packages used in this project.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Reading Training Data</span>
@@ -11931,7 +11931,7 @@ Here is list of packages used in this project.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Reading Training Data</span>
@@ -11961,7 +11961,7 @@ Here is list of packages used in this project.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[3]:</div>
+<div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -12033,7 +12033,7 @@ Here is list of packages used in this project.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Reading Properties Data</span>
@@ -12063,7 +12063,7 @@ Here is list of packages used in this project.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[4]:</div>
+<div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -12244,7 +12244,7 @@ Here is list of packages used in this project.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Merging training and properties filed on unique field &#39;parcelid&#39;</span>
@@ -12274,7 +12274,7 @@ Here is list of packages used in this project.</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[5]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -12447,6 +12447,81 @@ Here is list of packages used in this project.</p>
 </div>
 </div>
 
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Statistical Summary</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.width&#39;</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;precision&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">description</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">description</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>        parcelid   logerror  airconditioningtypeid  architecturalstyletypeid  basementsqft  bathroomcnt  bedroomcnt  \
+count  9.028e+04  90275.000              28781.000                   261.000        43.000    90275.000   90275.000   
+mean   1.298e+07      0.011                  1.816                     7.230       713.581        2.279       3.032   
+std    2.505e+06      0.161                  2.974                     2.716       437.434        1.004       1.156   
+min    1.071e+07     -4.605                  1.000                     2.000       100.000        0.000       0.000   
+25%    1.156e+07     -0.025                  1.000                     7.000       407.500        2.000       2.000   
+50%    1.255e+07      0.006                  1.000                     7.000       616.000        2.000       3.000   
+75%    1.423e+07      0.039                  1.000                     7.000       872.000        3.000       4.000   
+max    1.630e+08      4.737                 13.000                    21.000      1555.000       20.000      16.000   
+
+       buildingclasstypeid  buildingqualitytypeid  calculatedbathnbr         ...           yardbuildingsqft26  \
+count                 16.0              57364.000          89093.000         ...                       95.000   
+mean                   4.0                  5.565              2.309         ...                      311.695   
+std                    0.0                  1.901              0.976         ...                      346.355   
+min                    4.0                  1.000              1.000         ...                       18.000   
+25%                    4.0                  4.000              2.000         ...                      100.000   
+50%                    4.0                  7.000              2.000         ...                      159.000   
+75%                    4.0                  7.000              3.000         ...                      361.000   
+max                    4.0                 12.000             20.000         ...                     1366.000   
+
+       yearbuilt  numberofstories  structuretaxvaluedollarcnt  taxvaluedollarcnt  assessmentyear  \
+count  89519.000        20570.000                   8.990e+04          9.027e+04         90275.0   
+mean    1968.533            1.441                   1.801e+05          4.577e+05          2015.0   
+std       23.763            0.544                   2.091e+05          5.549e+05             0.0   
+min     1885.000            1.000                   1.000e+02          2.200e+01          2015.0   
+25%     1953.000            1.000                   8.124e+04          1.990e+05          2015.0   
+50%     1970.000            1.000                   1.320e+05          3.429e+05          2015.0   
+75%     1987.000            2.000                   2.105e+05          5.406e+05          2015.0   
+max     2015.000            4.000                   9.948e+06          2.775e+07          2015.0   
+
+       landtaxvaluedollarcnt   taxamount  taxdelinquencyyear  censustractandblock  
+count              9.027e+04   90269.000            1783.000            8.967e+04  
+mean               2.783e+05    5983.976              13.403            6.049e+13  
+std                4.005e+05    6838.877               2.716            2.047e+11  
+min                2.200e+01      49.080               6.000            6.037e+13  
+25%                8.223e+04    2872.830              13.000            6.037e+13  
+50%                1.930e+05    4542.750              14.000            6.038e+13  
+75%                3.454e+05    6901.090              15.000            6.059e+13  
+max                2.450e+07  321936.090              99.000            6.111e+13  
+
+[8 rows x 54 columns]
+</pre>
+</div>
 </div>
 
 </div>
